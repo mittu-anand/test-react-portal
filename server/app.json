@@ -1,0 +1,287 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith"
+    }
+  ],
+  "login": {
+    "userId": "customerA"
+  },
+  "sites": [
+    {
+      "siteId": "FRC01",
+      "siteName": "FRANCE ONE",
+      "siteCode": "FC1",
+      "service": "MS Teams",
+      "serviceDescription": "Communication App",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC01",
+      "siteName": "FRANCE ONE",
+      "siteCode": "FC1",
+      "service": "Service One",
+      "serviceDescription": "File Sharing",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC01",
+      "siteName": "FRANCE ONE",
+      "siteCode": "FC1",
+      "service": "Service Two",
+      "serviceDescription": "Video Conferencing",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC01",
+      "siteName": "FRANCE ONE",
+      "siteCode": "FC1",
+      "service": "Service Three",
+      "serviceDescription": "Email",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC01",
+      "siteName": "FRANCE ONE",
+      "siteCode": "FC1",
+      "service": "Service Four",
+      "serviceDescription": "Calendar",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC02",
+      "siteName": "FRANCE TWO",
+      "siteCode": "FC2",
+      "service": "Service Five",
+      "serviceDescription": "Customer Support",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC02",
+      "siteName": "FRANCE TWO",
+      "siteCode": "FC2",
+      "service": "Service Six",
+      "serviceDescription": "Billing",
+      "customer": "01 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC02",
+      "siteName": "FRANCE TWO",
+      "siteCode": "FC2",
+      "service": "Service Seven",
+      "serviceDescription": "Inventory Management",
+      "customer": "01 Company",
+      "ragStatus": "RED"
+    },
+    {
+      "siteId": "FRC02",
+      "siteName": "FRANCE TWO",
+      "siteCode": "FC2",
+      "service": "Service Eight",
+      "serviceDescription": "Order Tracking",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC02",
+      "siteName": "FRANCE TWO",
+      "siteCode": "FC2",
+      "service": "Service Nine",
+      "serviceDescription": "Project Management",
+      "customer": "01 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC03",
+      "siteName": "FRANCE THREE",
+      "siteCode": "FC3",
+      "service": "Service Ten",
+      "serviceDescription": "Marketing",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC03",
+      "siteName": "FRANCE THREE",
+      "siteCode": "FC3",
+      "service": "Service Eleven",
+      "serviceDescription": "Sales",
+      "customer": "01 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC03",
+      "siteName": "FRANCE THREE",
+      "siteCode": "FC3",
+      "service": "Service Twelve",
+      "serviceDescription": "Analytics",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC03",
+      "siteName": "FRANCE THREE",
+      "siteCode": "FC3",
+      "service": "Service Thirteen",
+      "serviceDescription": "Customer Feedback",
+      "customer": "01 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC03",
+      "siteName": "FRANCE THREE",
+      "siteCode": "FC3",
+      "service": "Service Fourteen",
+      "serviceDescription": "Campaign Management",
+      "customer": "01 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC04",
+      "siteName": "FRANCE FOUR",
+      "siteCode": "FC4",
+      "service": "Service Fifteen",
+      "serviceDescription": "Cloud Storage",
+      "customer": "02 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC04",
+      "siteName": "FRANCE FOUR",
+      "siteCode": "FC4",
+      "service": "Service Sixteen",
+      "serviceDescription": "Cloud Compute",
+      "customer": "02 Company",
+      "ragStatus": "RED"
+    },
+    {
+      "siteId": "FRC04",
+      "siteName": "FRANCE FOUR",
+      "siteCode": "FC4",
+      "service": "Service Seventeen",
+      "serviceDescription": "Big Data Analytics",
+      "customer": "02 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC04",
+      "siteName": "FRANCE FOUR",
+      "siteCode": "FC4",
+      "service": "Service Eighteen",
+      "serviceDescription": "Machine Learning",
+      "customer": "02 Company",
+      "ragStatus": "RED"
+    },
+    {
+      "siteId": "FRC04",
+      "siteName": "FRANCE FOUR",
+      "siteCode": "FC4",
+      "service": "Service Nineteen",
+      "serviceDescription": "AI Service",
+      "customer": "02 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC05",
+      "siteName": "FRANCE FIVE",
+      "siteCode": "FC5",
+      "service": "Service Twenty",
+      "serviceDescription": "Data Lake",
+      "customer": "02 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC05",
+      "siteName": "FRANCE FIVE",
+      "siteCode": "FC5",
+      "service": "Service Twenty-One",
+      "serviceDescription": "BI Tools",
+      "customer": "02 Company",
+      "ragStatus": "RED"
+    },
+    {
+      "siteId": "FRC05",
+      "siteName": "FRANCE FIVE",
+      "siteCode": "FC5",
+      "service": "Service Twenty-Two",
+      "serviceDescription": "Data Processing",
+      "customer": "02 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC05",
+      "siteName": "FRANCE FIVE",
+      "siteCode": "FC5",
+      "service": "Service Twenty-Three",
+      "serviceDescription": "Customer Insights",
+      "customer": "02 Company",
+      "ragStatus": "RED"
+    },
+    {
+      "siteId": "FRC05",
+      "siteName": "FRANCE FIVE",
+      "siteCode": "FC5",
+      "service": "Service Twenty-Four",
+      "serviceDescription": "Data Warehouse",
+      "customer": "02 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC06",
+      "siteName": "FRANCE SIX",
+      "siteCode": "FC6",
+      "service": "Service Twenty-Five",
+      "serviceDescription": "CRM Service",
+      "customer": "03 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC06",
+      "siteName": "FRANCE SIX",
+      "siteCode": "FC6",
+      "service": "Service Twenty-Six",
+      "serviceDescription": "Support Management",
+      "customer": "03 Company",
+      "ragStatus": "AMBER"
+    },
+    {
+      "siteId": "FRC06",
+      "siteName": "FRANCE SIX",
+      "siteCode": "FC6",
+      "service": "Service Twenty-Seven",
+      "serviceDescription": "Customer Analytics",
+      "customer": "03 Company",
+      "ragStatus": "RED"
+    },
+    {
+      "siteId": "FRC06",
+      "siteName": "FRANCE SIX",
+      "siteCode": "FC6",
+      "service": "Service Twenty-Eight",
+      "serviceDescription": "Customer Feedback",
+      "customer": "03 Company",
+      "ragStatus": "GREEN"
+    },
+    {
+      "siteId": "FRC06",
+      "siteName": "FRANCE SIX",
+      "siteCode": "FC6",
+      "service": "Service Twenty-Nine",
+      "serviceDescription": "Data Management",
+      "customer": "03 Company",
+      "ragStatus": "AMBER"
+    }
+  ]
+}
