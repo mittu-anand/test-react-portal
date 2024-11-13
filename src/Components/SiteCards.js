@@ -18,7 +18,7 @@ export default function SiteCards({ site }) {
         title={
           <Link
             className="site-card-title"
-            to={`/site/${site?.siteId}`}
+            to={`/site/${site?.siteCode}`}
           >
             {site?.siteName}
           </Link>

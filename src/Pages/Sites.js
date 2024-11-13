@@ -12,39 +12,42 @@ import { useParams } from "react-router-dom";
 import useApiService from "../Hooks/useApiService";
 import { useAppContext } from "../Context/AppContext";
 
-const data = [
-  { label: "P1 Tickets", value: 45, color: "#3f51b5" },
-  { label: "P2 Tickets", value: 25, color: "#f44336" },
-];
-
 function Sites() {
-  const { siteId } = useParams();
+  const { siteCode } = useParams();
   const { state } = useAppContext();
-  const { fetchSites } = useApiService();
-  const [selectedSiteInfo, setSelectedSiteInfo] = useState([]);
+  const [chartData, setChartData] = useState([]);
+  const { fetchSiteData } = useApiService();
 
   useEffect(() => {
-    fetchSites();
+    fetchSiteData(siteCode);
   }, []);
 
   useEffect(() => {
-    const filteredBySite = state?.sites?.filter(
-      (item) => item.siteId === siteId
-    );
-    setSelectedSiteInfo(filteredBySite);
-  }, [state?.sites, siteId, setSelectedSiteInfo]);
+    setChartData([
+      {
+        label: "P1 Tickets",
+        value: state?.sites?.ticketP1Count,
+        color: "#3f51b5",
+      },
+      {
+        label: "P2 Tickets",
+        value: state?.sites?.ticketP2Count,
+        color: "#f44336",
+      },
+    ]);
+  }, [state?.sites]);
 
   return (
     <>
       <PageHeader
         title="Site Dashboard"
-        subTitleValue={selectedSiteInfo?.[0]?.siteName || siteId}
+        subTitleValue={state?.sites?.sites?.[0]?.siteName || siteCode}
       />
       <Grid container spacing={2} padding={3}>
         <Grid size={5}>
           <Card variant="outlined" className="card-box">
             <CardHeader title="Overall Service Health View" />
-            <SiteServiceTable src={selectedSiteInfo} />
+            <SiteServiceTable src={state?.sites?.sites || []} />
           </Card>
         </Grid>
         <Grid size={7}>
@@ -59,7 +62,7 @@ function Sites() {
                   spacing={2}
                   mb={2}
                 >
-                  {data.map((item) => (
+                  {chartData.map((item) => (
                     <Box key={item.label} display="flex" alignItems="center">
                       <Box
                         sx={{
@@ -74,23 +77,24 @@ function Sites() {
                     </Box>
                   ))}
                 </Stack>
-
-                <PieChart
-                  series={[
-                    {
-                      outerRadius: 100,
-                      data: data,
-                    },
-                  ]}
-                  className="pie-chart-wrapper"
-                  height={300}
-                  slotProps={{
-                    legend: { hidden: true },
-                  }}
-                />
+                {chartData && (
+                  <PieChart
+                    series={[
+                      {
+                        outerRadius: 100,
+                        data: chartData,
+                      },
+                    ]}
+                    className="pie-chart-wrapper"
+                    height={300}
+                    slotProps={{
+                      legend: { hidden: true },
+                    }}
+                  />
+                )}
               </Grid>
               <Grid size={8}>
-                <IncidentTable />
+                <IncidentTable src={state?.sites?.tickets || []} />
               </Grid>
             </Grid>
           </Card>
@@ -100,15 +104,19 @@ function Sites() {
         <Grid size={2}>
           <div className="quick-info-box">
             <div className="quick-info-header">Tickets in SLA</div>
-            <div className="quick-info-content">02</div>
+            <div className="quick-info-content">{state?.sites?.slaTickets}</div>
           </div>
           <div className="quick-info-box">
             <div className="quick-info-header">SLA Breached</div>
-            <div className="quick-info-content">01</div>
+            <div className="quick-info-content">
+              {state?.sites?.slaBreached}
+            </div>
           </div>
           <div className="quick-info-box">
             <div className="quick-info-header">SLA Breach in Next 1 Hour</div>
-            <div className="quick-info-content">03</div>
+            <div className="quick-info-content">
+              {state?.sites?.slaBreachIn1Hour}
+            </div>
           </div>
         </Grid>
         <Grid size={10}>
@@ -118,7 +126,7 @@ function Sites() {
             sx={{ width: "100%" }}
           >
             <CardHeader title="Overall Alarm View" />
-            <AlarmViewTable />
+            <AlarmViewTable src={state?.sites?.overallAlarms || []} />
           </Card>
         </Grid>
       </Grid>

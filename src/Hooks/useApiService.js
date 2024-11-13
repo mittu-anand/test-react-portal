@@ -6,20 +6,32 @@ import { useAppContext } from "../Context/AppContext";
 const useApiService = () => {
   const { dispatch } = useAppContext();
 
-  const fetchSites = async () => {
+  const fetchDashboardData = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/${END_POINTS?.sites}`);
-      dispatch({ type: "SET_SITES", payload: response.data });
+      const response = await axios.get(`${BASE_URL}${END_POINTS?.sites}`);
+      dispatch({ type: "SET_DASHBOARD_DATA", payload: response.data });
     } catch (error) {
       console.error(error.message);
     } finally {
     }
   };
 
-  const fetchMonitoringData = async () => {
+  const fetchSiteData = async (siteCode) => {
     try {
-      const response = await axios.get(END_POINTS?.monitoring);
-      dispatch({ type: "SET_MONITORING", payload: response.data });
+      const url = `${BASE_URL}${END_POINTS?.sitesDashboard}?siteCode=${siteCode}`;
+      const response = await axios.get(url);
+      dispatch({ type: "SET_SITES_DATA", payload: response.data });
+    } catch (error) {
+      console.error(error.message);
+    } finally {
+    }
+  };
+
+  const fetchServiceData = async (siteCode, serviceName) => {
+    try {
+      const url = `${BASE_URL}${END_POINTS?.service}?siteCode=${siteCode} && serviceName=${serviceName}`;
+      const response = await axios.get(url);
+      dispatch({ type: "SET_SERVICE_DATA", payload: response.data });
     } catch (error) {
       console.error(error.message);
     } finally {
@@ -28,11 +40,12 @@ const useApiService = () => {
 
   const groupServicesBySite = (services) => {
     const grouped = {};
-    services.forEach((service) => {
-      const { siteId, siteName, ragStatus } = service;
+    services?.forEach((service) => {
+      const { siteId, siteName, ragStatus, siteCode } = service;
       if (!grouped[siteId]) {
         grouped[siteId] = {
           siteId,
+          siteCode,
           siteName,
           services: [],
           status: RAG_STATUS.green,
@@ -53,8 +66,9 @@ const useApiService = () => {
   };
 
   return {
-    fetchSites,
-    fetchMonitoringData,
+    fetchDashboardData,
+    fetchSiteData,
+    fetchServiceData,
     groupServicesBySite,
   };
 };

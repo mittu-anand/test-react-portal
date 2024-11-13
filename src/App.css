@@ -118,7 +118,7 @@ body {
 }
 
 .card-box-alarm {
-  height: 400px;
+  height: 500px;
 }
 
 .card-box-large {
@@ -140,7 +140,7 @@ body {
 }
 
 .quick-info-box {
-  padding-bottom: 8px;
+  padding-bottom: 30px;
 }
 
 .quick-info-header {
@@ -151,7 +151,7 @@ body {
 }
 
 .quick-info-content {
-  height: 100px;
+  height: 118px;
   background: #a181a1;
   font-size: 36px;
   color: white;
@@ -161,6 +161,7 @@ body {
 
 .o-table-container {
   max-height: 350px;
+  min-height: 350px;
   margin-top: 30px;
   padding-left: 30px;
   padding-right: 30px;

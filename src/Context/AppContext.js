@@ -1,25 +1,25 @@
 import React, { createContext, useContext, useReducer } from "react";
 
 const initialState = {
-  sites: [],
-  monitoring: [],
-  selectedSite: {},
+  dashboard: {},
+  sites: {},
+  service: {},
 };
 
 const ACTIONS = {
-  SET_SITES: "SET_SITES",
-  SET_MONITORING: "SET_MONITORING",
-  SET_SELECTED_SITE: "SET_SELECTED_SITE",
+  SET_DASHBOARD_DATA: "SET_DASHBOARD_DATA",
+  SET_SITES_DATA: "SET_SITES_DATA",
+  SET_SERVICE_DATA: "SET_SERVICE_DATA",
 };
 
 function globalReducer(state, action) {
   switch (action.type) {
-    case ACTIONS.SET_SITES:
+    case ACTIONS.SET_DASHBOARD_DATA:
+      return { ...state, dashboard: action.payload };
+    case ACTIONS.SET_SITES_DATA:
       return { ...state, sites: action.payload };
-    case ACTIONS.SET_MONITORING:
-      return { ...state, monitoring: action.payload };
-    case ACTIONS.SET_SELECTED_SITE:
-      return { ...state, selectedSite: action.payload };
+    case ACTIONS.SET_SERVICE_DATA:
+      return { ...state, service: action.payload };
     default:
       return state;
   }

@@ -11,25 +11,31 @@ import SiteCards from "../Components/SiteCards";
 import { useAppContext } from "../Context/AppContext";
 import useApiService from "../Hooks/useApiService";
 
-const data = [
-  { label: "P1 Tickets", value: 45, color: "#3f51b5" },
-  { label: "P2 Tickets", value: 25, color: "#f44336" },
-];
-
 function Dashboard() {
   const { state } = useAppContext();
-  const { fetchSites, groupServicesBySite } = useApiService();
+  const { fetchDashboardData, groupServicesBySite } = useApiService();
+  const [chartData, setChartData] = useState([]);
   const [serviceGroups, setServiceGroups] = useState([]);
 
   useEffect(() => {
-    setServiceGroups(groupServicesBySite(state?.sites));
-  }, [state?.sites]);
+    setServiceGroups(groupServicesBySite(state?.dashboard?.site));
+    setChartData([
+      {
+        label: "P1 Tickets",
+        value: state?.dashboard?.ticketP1Count,
+        color: "#3f51b5",
+      },
+      {
+        label: "P2 Tickets",
+        value: state?.dashboard?.ticketP2Count,
+        color: "#f44336",
+      },
+    ]);
+  }, [state?.dashboard]);
 
   useEffect(() => {
-    fetchSites();
+    fetchDashboardData();
   }, []);
-
-  console.log(state);
 
   return (
     <>
@@ -38,7 +44,7 @@ function Dashboard() {
         <Grid size={5}>
           <Card variant="outlined" className="card-box">
             <CardHeader title="Overall Service Health View" />
-            <ServiceTable src={state.sites} />
+            <ServiceTable src={state?.dashboard?.site || []} />
           </Card>
         </Grid>
         <Grid size={7}>
@@ -54,7 +60,7 @@ function Dashboard() {
                   spacing={2}
                   mb={2}
                 >
-                  {data.map((item) => (
+                  {chartData.map((item) => (
                     <Box key={item.label} display="flex" alignItems="center">
                       <Box
                         sx={{
@@ -74,7 +80,7 @@ function Dashboard() {
                   series={[
                     {
                       outerRadius: 100,
-                      data: data,
+                      data: chartData,
                     },
                   ]}
                   className="pie-chart-wrapper"
@@ -85,7 +91,7 @@ function Dashboard() {
                 />
               </Grid>
               <Grid size={8}>
-                <IncidentTable />
+                <IncidentTable src={state?.dashboard?.tickets || []} />
               </Grid>
             </Grid>
           </Card>

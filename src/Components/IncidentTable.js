@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Table,
   TableBody,
@@ -6,43 +6,60 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  TablePagination,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
-function IncidentTable() {
-  const rows = [
-    { id: 1, name: "Item 1", description: "Description 1" },
-    { id: 2, name: "Item 2", description: "Description 2" },
-    { id: 3, name: "Item 3", description: "Description 3" },
-  ];
+function IncidentTable({ src }) {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
 
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
   return (
-    <TableContainer sx={{padding: '30px'}}>
-      <Table>
-        <TableHead
-          sx={{
-            borderTop: "2px solid #ff7900",
-            borderBottom: "2px solid #ff7900",
-          }}
-        >
-          <TableRow>
-            <TableCell>Ticket ID</TableCell>
-            <TableCell>Summary</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell>Priority</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.id}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.description}</TableCell>
-              <TableCell>{row.description}</TableCell>
+    <>
+      <TableContainer className="o-table-container">
+        <Table stickyHeader>
+          <TableHead>
+            <TableRow>
+              <TableCell className="table-header">Ticket ID</TableCell>
+              <TableCell className="table-header">Summary</TableCell>
+              <TableCell className="table-header">Status</TableCell>
+              <TableCell className="table-header">Priority</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {src
+              ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row, index) => (
+                <TableRow key={index}>
+                  <TableCell>
+                    <Link to={`#`}>{row?.ticketId}</Link>
+                  </TableCell>
+                  <TableCell>{row?.description}</TableCell>
+                  <TableCell>{row?.status}</TableCell>
+                  <TableCell>{row?.ticketPriority}</TableCell>
+                </TableRow>
+              ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 15]}
+        component="div"
+        count={src.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+    </>
   );
 }
 

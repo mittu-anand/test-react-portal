@@ -47,7 +47,7 @@ function SiteServiceTable({ src }) {
                   <TableCell>
                     <StatusCircle color={getStatusColor(row?.ragStatus)} />
                   </TableCell>
-                  <TableCell>{row?.bandWidth}</TableCell>
+                  <TableCell>{row?.bandwidthUtilization}</TableCell>
                   <TableCell>{row?.lastChecked}</TableCell>
                 </TableRow>
               ))}

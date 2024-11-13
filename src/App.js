@@ -5,7 +5,7 @@ import Dashboard from "./Pages/Dashboard";
 import Sites from "./Pages/Sites";
 import Services from "./Pages/Services";
 import Layout from "./Layout/Layout";
-import './App.css'
+import "./App.css";
 
 function App() {
   return (
@@ -14,8 +14,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/site/:siteId" element={<Sites />} />
-          <Route path="/service/:serviceId" element={<Services />} />
+          <Route path="/site/:siteCode" element={<Sites />} />
+          <Route
+            path="/service/:siteCode/:serviceName"
+            element={<Services />}
+          />
         </Route>
         <Route path="*" element={<Login />} />
       </Routes>

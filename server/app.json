@@ -2,7 +2,8 @@
   "users": [
     {
       "id": 1,
-      "name": "John Doe"
+      "name": "John Doe",
+      "customer": ""
     },
     {
       "id": 2,
@@ -12,276 +13,710 @@
   "login": {
     "userId": "customerA"
   },
-  "sites": [
-    {
-      "siteId": "FRC01",
-      "siteName": "FRANCE ONE",
-      "siteCode": "FC1",
-      "service": "MS Teams",
-      "serviceDescription": "Communication App",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC01",
-      "siteName": "FRANCE ONE",
-      "siteCode": "FC1",
-      "service": "Service One",
-      "serviceDescription": "File Sharing",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC01",
-      "siteName": "FRANCE ONE",
-      "siteCode": "FC1",
-      "service": "Service Two",
-      "serviceDescription": "Video Conferencing",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC01",
-      "siteName": "FRANCE ONE",
-      "siteCode": "FC1",
-      "service": "Service Three",
-      "serviceDescription": "Email",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC01",
-      "siteName": "FRANCE ONE",
-      "siteCode": "FC1",
-      "service": "Service Four",
-      "serviceDescription": "Calendar",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC02",
-      "siteName": "FRANCE TWO",
-      "siteCode": "FC2",
-      "service": "Service Five",
-      "serviceDescription": "Customer Support",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC02",
-      "siteName": "FRANCE TWO",
-      "siteCode": "FC2",
-      "service": "Service Six",
-      "serviceDescription": "Billing",
-      "customer": "01 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC02",
-      "siteName": "FRANCE TWO",
-      "siteCode": "FC2",
-      "service": "Service Seven",
-      "serviceDescription": "Inventory Management",
-      "customer": "01 Company",
-      "ragStatus": "RED"
-    },
-    {
-      "siteId": "FRC02",
-      "siteName": "FRANCE TWO",
-      "siteCode": "FC2",
-      "service": "Service Eight",
-      "serviceDescription": "Order Tracking",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC02",
-      "siteName": "FRANCE TWO",
-      "siteCode": "FC2",
-      "service": "Service Nine",
-      "serviceDescription": "Project Management",
-      "customer": "01 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC03",
-      "siteName": "FRANCE THREE",
-      "siteCode": "FC3",
-      "service": "Service Ten",
-      "serviceDescription": "Marketing",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC03",
-      "siteName": "FRANCE THREE",
-      "siteCode": "FC3",
-      "service": "Service Eleven",
-      "serviceDescription": "Sales",
-      "customer": "01 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC03",
-      "siteName": "FRANCE THREE",
-      "siteCode": "FC3",
-      "service": "Service Twelve",
-      "serviceDescription": "Analytics",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC03",
-      "siteName": "FRANCE THREE",
-      "siteCode": "FC3",
-      "service": "Service Thirteen",
-      "serviceDescription": "Customer Feedback",
-      "customer": "01 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC03",
-      "siteName": "FRANCE THREE",
-      "siteCode": "FC3",
-      "service": "Service Fourteen",
-      "serviceDescription": "Campaign Management",
-      "customer": "01 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC04",
-      "siteName": "FRANCE FOUR",
-      "siteCode": "FC4",
-      "service": "Service Fifteen",
-      "serviceDescription": "Cloud Storage",
-      "customer": "02 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC04",
-      "siteName": "FRANCE FOUR",
-      "siteCode": "FC4",
-      "service": "Service Sixteen",
-      "serviceDescription": "Cloud Compute",
-      "customer": "02 Company",
-      "ragStatus": "RED"
-    },
-    {
-      "siteId": "FRC04",
-      "siteName": "FRANCE FOUR",
-      "siteCode": "FC4",
-      "service": "Service Seventeen",
-      "serviceDescription": "Big Data Analytics",
-      "customer": "02 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC04",
-      "siteName": "FRANCE FOUR",
-      "siteCode": "FC4",
-      "service": "Service Eighteen",
-      "serviceDescription": "Machine Learning",
-      "customer": "02 Company",
-      "ragStatus": "RED"
-    },
-    {
-      "siteId": "FRC04",
-      "siteName": "FRANCE FOUR",
-      "siteCode": "FC4",
-      "service": "Service Nineteen",
-      "serviceDescription": "AI Service",
-      "customer": "02 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC05",
-      "siteName": "FRANCE FIVE",
-      "siteCode": "FC5",
-      "service": "Service Twenty",
-      "serviceDescription": "Data Lake",
-      "customer": "02 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC05",
-      "siteName": "FRANCE FIVE",
-      "siteCode": "FC5",
-      "service": "Service Twenty-One",
-      "serviceDescription": "BI Tools",
-      "customer": "02 Company",
-      "ragStatus": "RED"
-    },
-    {
-      "siteId": "FRC05",
-      "siteName": "FRANCE FIVE",
-      "siteCode": "FC5",
-      "service": "Service Twenty-Two",
-      "serviceDescription": "Data Processing",
-      "customer": "02 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC05",
-      "siteName": "FRANCE FIVE",
-      "siteCode": "FC5",
-      "service": "Service Twenty-Three",
-      "serviceDescription": "Customer Insights",
-      "customer": "02 Company",
-      "ragStatus": "RED"
-    },
-    {
-      "siteId": "FRC05",
-      "siteName": "FRANCE FIVE",
-      "siteCode": "FC5",
-      "service": "Service Twenty-Four",
-      "serviceDescription": "Data Warehouse",
-      "customer": "02 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC06",
-      "siteName": "FRANCE SIX",
-      "siteCode": "FC6",
-      "service": "Service Twenty-Five",
-      "serviceDescription": "CRM Service",
-      "customer": "03 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC06",
-      "siteName": "FRANCE SIX",
-      "siteCode": "FC6",
-      "service": "Service Twenty-Six",
-      "serviceDescription": "Support Management",
-      "customer": "03 Company",
-      "ragStatus": "AMBER"
-    },
-    {
-      "siteId": "FRC06",
-      "siteName": "FRANCE SIX",
-      "siteCode": "FC6",
-      "service": "Service Twenty-Seven",
-      "serviceDescription": "Customer Analytics",
-      "customer": "03 Company",
-      "ragStatus": "RED"
-    },
-    {
-      "siteId": "FRC06",
-      "siteName": "FRANCE SIX",
-      "siteCode": "FC6",
-      "service": "Service Twenty-Eight",
-      "serviceDescription": "Customer Feedback",
-      "customer": "03 Company",
-      "ragStatus": "GREEN"
-    },
-    {
-      "siteId": "FRC06",
-      "siteName": "FRANCE SIX",
-      "siteCode": "FC6",
-      "service": "Service Twenty-Nine",
-      "serviceDescription": "Data Management",
-      "customer": "03 Company",
-      "ragStatus": "AMBER"
+  "sites": {
+    "site": [
+      {
+        "siteId": "FRC01",
+        "siteName": "FRANCE ONE",
+        "siteCode": "FC1",
+        "service": "MS Teams",
+        "serviceDescription": "Communication App",
+        "customer": "01 Company",
+        "ragStatus": "GREEN",
+        "bandwidthUtilization": "40%"
+      },
+      {
+        "siteId": "FRC01",
+        "siteName": "FRANCE ONE",
+        "siteCode": "FC1",
+        "service": "Service One",
+        "serviceDescription": "File Sharing",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC01",
+        "siteName": "FRANCE ONE",
+        "siteCode": "FC1",
+        "service": "Service Two",
+        "serviceDescription": "Video Conferencing",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC01",
+        "siteName": "FRANCE ONE",
+        "siteCode": "FC1",
+        "service": "Service Three",
+        "serviceDescription": "Email",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC01",
+        "siteName": "FRANCE ONE",
+        "siteCode": "FC1",
+        "service": "Service Four",
+        "serviceDescription": "Calendar",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC02",
+        "siteName": "FRANCE TWO",
+        "siteCode": "FC2",
+        "service": "Service Five",
+        "serviceDescription": "Customer Support",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC02",
+        "siteName": "FRANCE TWO",
+        "siteCode": "FC2",
+        "service": "Service Six",
+        "serviceDescription": "Billing",
+        "customer": "01 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC02",
+        "siteName": "FRANCE TWO",
+        "siteCode": "FC2",
+        "service": "Service Seven",
+        "serviceDescription": "Inventory Management",
+        "customer": "01 Company",
+        "ragStatus": "RED"
+      },
+      {
+        "siteId": "FRC02",
+        "siteName": "FRANCE TWO",
+        "siteCode": "FC2",
+        "service": "Service Eight",
+        "serviceDescription": "Order Tracking",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC02",
+        "siteName": "FRANCE TWO",
+        "siteCode": "FC2",
+        "service": "Service Nine",
+        "serviceDescription": "Project Management",
+        "customer": "01 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC03",
+        "siteName": "FRANCE THREE",
+        "siteCode": "FC3",
+        "service": "Service Ten",
+        "serviceDescription": "Marketing",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC03",
+        "siteName": "FRANCE THREE",
+        "siteCode": "FC3",
+        "service": "Service Eleven",
+        "serviceDescription": "Sales",
+        "customer": "01 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC03",
+        "siteName": "FRANCE THREE",
+        "siteCode": "FC3",
+        "service": "Service Twelve",
+        "serviceDescription": "Analytics",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC03",
+        "siteName": "FRANCE THREE",
+        "siteCode": "FC3",
+        "service": "Service Thirteen",
+        "serviceDescription": "Customer Feedback",
+        "customer": "01 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC03",
+        "siteName": "FRANCE THREE",
+        "siteCode": "FC3",
+        "service": "Service Fourteen",
+        "serviceDescription": "Campaign Management",
+        "customer": "01 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC04",
+        "siteName": "FRANCE FOUR",
+        "siteCode": "FC4",
+        "service": "Service Fifteen",
+        "serviceDescription": "Cloud Storage",
+        "customer": "02 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC04",
+        "siteName": "FRANCE FOUR",
+        "siteCode": "FC4",
+        "service": "Service Sixteen",
+        "serviceDescription": "Cloud Compute",
+        "customer": "02 Company",
+        "ragStatus": "RED"
+      },
+      {
+        "siteId": "FRC04",
+        "siteName": "FRANCE FOUR",
+        "siteCode": "FC4",
+        "service": "Service Seventeen",
+        "serviceDescription": "Big Data Analytics",
+        "customer": "02 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC04",
+        "siteName": "FRANCE FOUR",
+        "siteCode": "FC4",
+        "service": "Service Eighteen",
+        "serviceDescription": "Machine Learning",
+        "customer": "02 Company",
+        "ragStatus": "RED"
+      },
+      {
+        "siteId": "FRC04",
+        "siteName": "FRANCE FOUR",
+        "siteCode": "FC4",
+        "service": "Service Nineteen",
+        "serviceDescription": "AI Service",
+        "customer": "02 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC05",
+        "siteName": "FRANCE FIVE",
+        "siteCode": "FC5",
+        "service": "Service Twenty",
+        "serviceDescription": "Data Lake",
+        "customer": "02 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC05",
+        "siteName": "FRANCE FIVE",
+        "siteCode": "FC5",
+        "service": "Service Twenty-One",
+        "serviceDescription": "BI Tools",
+        "customer": "02 Company",
+        "ragStatus": "RED"
+      },
+      {
+        "siteId": "FRC05",
+        "siteName": "FRANCE FIVE",
+        "siteCode": "FC5",
+        "service": "Service Twenty-Two",
+        "serviceDescription": "Data Processing",
+        "customer": "02 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC05",
+        "siteName": "FRANCE FIVE",
+        "siteCode": "FC5",
+        "service": "Service Twenty-Three",
+        "serviceDescription": "Customer Insights",
+        "customer": "02 Company",
+        "ragStatus": "RED"
+      },
+      {
+        "siteId": "FRC05",
+        "siteName": "FRANCE FIVE",
+        "siteCode": "FC5",
+        "service": "Service Twenty-Four",
+        "serviceDescription": "Data Warehouse",
+        "customer": "02 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC06",
+        "siteName": "FRANCE SIX",
+        "siteCode": "FC6",
+        "service": "Service Twenty-Five",
+        "serviceDescription": "CRM Service",
+        "customer": "03 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC06",
+        "siteName": "FRANCE SIX",
+        "siteCode": "FC6",
+        "service": "Service Twenty-Six",
+        "serviceDescription": "Support Management",
+        "customer": "03 Company",
+        "ragStatus": "AMBER"
+      },
+      {
+        "siteId": "FRC06",
+        "siteName": "FRANCE SIX",
+        "siteCode": "FC6",
+        "service": "Service Twenty-Seven",
+        "serviceDescription": "Customer Analytics",
+        "customer": "03 Company",
+        "ragStatus": "RED"
+      },
+      {
+        "siteId": "FRC06",
+        "siteName": "FRANCE SIX",
+        "siteCode": "FC6",
+        "service": "Service Twenty-Eight",
+        "serviceDescription": "Customer Feedback",
+        "customer": "03 Company",
+        "ragStatus": "GREEN"
+      },
+      {
+        "siteId": "FRC06",
+        "siteName": "FRANCE SIX",
+        "siteCode": "FC6",
+        "service": "Service Twenty-Nine",
+        "serviceDescription": "Data Management",
+        "customer": "03 Company",
+        "ragStatus": "AMBER"
+      }
+    ],
+    "ticketP1Count": 3,
+    "ticketP2Count": 1,
+    "tickets": [
+      {
+        "ticketId": "INC102567",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRSID02",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102568",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR26",
+        "siteId": "FRSID01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "InternetService01",
+        "root": true
+      },
+      {
+        "ticketId": "INC102571",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRSID02",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102569",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P2",
+        "siteCode": "FR26",
+        "siteId": "FRSID01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "InternetService01",
+        "root": true
+      },
+      {
+        "ticketId": "INC102569",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P2",
+        "siteCode": "FR26",
+        "siteId": "FRSID01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "InternetService01",
+        "root": true
+      },
+      {
+        "ticketId": "INC102569",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P2",
+        "siteCode": "FR26",
+        "siteId": "FRSID01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "InternetService01",
+        "root": true
+      }
+    ]
+  },
+  "sitesDashboard": {
+    "sites": [
+      {
+        "id": 1,
+        "siteId": "FRC01",
+        "siteName": "France FR23",
+        "siteCode": "FR23",
+        "service": "MPLSService03",
+        "serviceDescription": "MPLS Service Primary",
+        "customer": "Customer A",
+        "ragStatus": "GREEN",
+        "bandwidthUtilization": "40%"
+      }
+    ],
+    "tickets": [
+      {
+        "ticketId": "INC102567",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102571",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      }
+    ],
+    "overallAlarms": [
+      {
+        "ticketId": "INC102567",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102571",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102570",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102561",
+        "hostname": "Gateway001",
+        "name": "Gateway3",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102591",
+        "hostname": "Gateway001",
+        "name": "Gateway2",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102575",
+        "hostname": "Gateway001",
+        "name": "Gateway 1",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRC01",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      }
+    ],
+    "slaTickets": 2,
+    "slaBreached": 1,
+    "slaBreachIn1Hour": 1,
+    "ticketP1Count": 2,
+    "ticketP2COunt": 4
+  },
+  "service": {
+    "serviceId": "MPLSService03",
+    "serviceName": "MPLSService03",
+    "bandwidth": "40%",
+    "status": "GREEN",
+    "alarms": [
+      {
+        "ticketId": "INC102567",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRSID02",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102571",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRSID02",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      }
+    ],
+    "tickets": [
+      {
+        "ticketId": "INC102567",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRSID02",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      },
+      {
+        "ticketId": "INC102571",
+        "hostname": "Gateway001",
+        "name": "Gateway",
+        "type": "Down",
+        "severity": "Warning",
+        "description": "BGP Session Down",
+        "ticketRef": "Ticket Raised",
+        "ticketPriority": "P1",
+        "siteCode": "FR23",
+        "siteId": "FRSID02",
+        "customerId": "1",
+        "customerName": "Customer A",
+        "status": "RED",
+        "vendor": "Cisco",
+        "model": "Cisco1.1",
+        "lastUpdatedTimestamp": "2024-11-11T07:34:00",
+        "serviceName": "MPLSService03",
+        "root": true
+      }
+    ],
+    "topology": {
+      "overlay": [
+        {
+          "source": "Cisco 3365 MSE 1",
+          "target": "SD-WAN Edge 610",
+          "sourceType": "router",
+          "targetType": "switch",
+          "service": "Internet Service",
+          "interfaceName": "Internet Service (Primary)",
+          "status": "down"
+        },
+        {
+          "source": "Cisco 3365 MSE 2",
+          "target": "SD-WAN Edge 610",
+          "sourceType": "router",
+          "targetType": "switch",
+          "service": "Internet Service",
+          "interfaceName": "Internet Service (Primary)",
+          "status": "up"
+        }
+      ],
+      "underlay": [
+        {
+          "source": "Cisco 3365 MSE 2",
+          "target": "SD-WAN Edge 610",
+          "sourceType": "router",
+          "targetType": "switch",
+          "service": "Internet Service",
+          "interfaceName": "Internet Service (Primary)",
+          "status": "up"
+        }
+      ]
     }
-  ]
+  }
 }

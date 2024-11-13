@@ -39,16 +39,18 @@ function ServiceTable({ src }) {
           </TableHead>
           <TableBody>
             {src
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row, index) => (
                 <TableRow key={index}>
                   <TableCell>
-                    <Link to={`/service/${row.service}`}>{row.service}</Link>
+                    <Link to={`/service/${row?.siteCode}/${row?.service}`}>
+                      {row?.service}
+                    </Link>
                   </TableCell>
-                  <TableCell>{row.siteName}</TableCell>
-                  <TableCell>{row.siteCode}</TableCell>
+                  <TableCell>{row?.siteName}</TableCell>
+                  <TableCell>{row?.siteCode}</TableCell>
                   <TableCell>
-                    <StatusCircle color={getStatusColor(row.ragStatus)} />
+                    <StatusCircle color={getStatusColor(row?.ragStatus)} />
                   </TableCell>
                 </TableRow>
               ))}
